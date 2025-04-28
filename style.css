@@ -5,15 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;}
-   
+    font-family: Helvetica, sans-serif;
+}
 
 header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,18 +24,20 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem 2rem;
+    width: 100%;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    font-family: "Courier New", Courier, monospace;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    font-size: 1.5rem;
+    width: 40%;
 }
 
 .nav-links a {
@@ -48,37 +50,49 @@ nav {
     background-color: white;
     color: black;
     border: 1px solid black;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 90px;
+    padding: 1.3rem 1.3rem;
+    border-radius: 1em;
     cursor: pointer;
 }
 
 .hero-content {
     max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem 1rem; 
+    padding-top: 80px;
+    margin: auto;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
-.hero h1 {
+
+.hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: white;
 }
 
 .search-bar {
     display: flex;
-    background: white;
-    border-radius: 30px;
+    background: #f0f0f0;
+    border-radius: 1em;
+    height: 70px;
     overflow: hidden;
-    max-width: 600px;
-    margin: auto;
+    max-width: 800px;
+    margin: 2rem auto 4rem auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.search-bar button img {
+    width: 24px;
+    height: 24px;
+}
+
 .search-bar select,
-.search-bar input,
-.search-bar button {
+.search-bar input {
     border: none;
     padding: 0.9rem 1.2rem;
     font-size: 1rem;
@@ -90,8 +104,13 @@ nav {
 }
 
 .search-bar button {
-    background: #f0f0f0;
+    border: none;
+    background: transparent;
+    padding: 0 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-bar button:hover {
@@ -121,17 +140,32 @@ nav {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 2rem;
-    background: #fafafa;
 }
 
-.photo-grid img {
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2em;
+    aspect-ratio: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-card img {
     width: 100%;
-    height: auto;
-    border-radius: 5%;
+    height: 100%;
+    display: block;
     object-fit: cover;
+    border-radius: 2em;
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
 }
 
 footer {
@@ -142,15 +176,15 @@ footer {
 }
 
 .hero {
-    background: url('https://images.pexels.com/photos/8381004/pexels-photo-8381004.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=1400&dpr=1') no-repeat center/cover;
-    color: white;
+    background: url("https://images.pexels.com/photos/8381004/pexels-photo-8381004.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=1400&dpr=1") no-repeat center/cover;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    text-align: left;
-    height: 60vh; 
+    justify-content: center;
+    text-align: center;
     position: relative;
-    padding: 0 2rem;}
+    padding: 1rem;
+    min-height: 60vh;
+}
 
 .hero::before {
     content: "";
@@ -161,10 +195,4 @@ footer {
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
-}
-
-.hero-content,
-header {
-    position: relative;
-    z-index: 2;
 }
