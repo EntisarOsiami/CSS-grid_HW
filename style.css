@@ -5,11 +5,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    font-family: Arial, sans-serif;}
+   
 
 header {
     position: absolute;
@@ -58,16 +55,15 @@ nav {
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem; 
+    position: relative;
+    z-index: 2; 
 }
-
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    max-width: 800px;
-    line-height: 1.3;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .search-bar {
@@ -125,7 +121,7 @@ nav {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1rem;
     padding: 2rem;
     background: #fafafa;
@@ -134,7 +130,7 @@ nav {
 .photo-grid img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 5%;
     object-fit: cover;
 }
 
@@ -146,14 +142,15 @@ footer {
 }
 
 .hero {
-    background: url('https://images.pexels.com/photos/15315956/pexels-photo-15315956.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=1400&dpr=1') no-repeat center/cover;
+    background: url('https://images.pexels.com/photos/8381004/pexels-photo-8381004.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=1400&dpr=1') no-repeat center/cover;
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 4rem 2rem;
+    justify-content: center; 
+    text-align: left;
+    height: 60vh; 
     position: relative;
-    height: 60vh;
-}
+    padding: 0 2rem;}
 
 .hero::before {
     content: "";
